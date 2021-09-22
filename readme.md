@@ -10,5 +10,5 @@ Project for getting to know Git with support software.
 - Python 3.9
 - Windows 10 Pro
 
-##External Platform
+## External Platform
 [GitLab](https://gitlab.com) - repository hosting
