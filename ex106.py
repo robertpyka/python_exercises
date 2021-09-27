@@ -6,20 +6,25 @@ def remove_values(list_of_numbers, num):
         list_of_numbers.pop(-1)
         list_of_numbers.pop(0)
 
+def main():
+    list_of_values = []
 
-list_of_values = []
+    x = (input("Give value(empty to quit):"))
+    while x != "":
+        x = float(x)
+        list_of_values.append(x)
+        x = input("Give value:")
 
-x = int(input("Give value:"))
-while x != "0":
-    list_of_values.append(x)
-    x = int(input("Give value:"))
+    # declare how many highest and lowest values should be removed
+    to_remove = 2
+    list_of_values.sort()
 
-# declare how many highest and lowest values should be removed
-to_remove = 2
-list_of_values.sort()
+    if len(list_of_values) <= 2 * to_remove:
+        print("Wrong amount of values")
+    else:
+        remove_values(list_of_values, to_remove)
+        print(list_of_values)
 
-if len(list_of_values) <= 2 * to_remove:
-    print("Wrong amount of values")
-else:
-    remove_values(list_of_values, to_remove)
-    print(list_of_values)
+
+main()
+
